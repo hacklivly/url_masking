@@ -29,7 +29,7 @@ echo -e "\e[95m
 ╚██████╔╝██║  ██║███████╗    ██║ ╚═╝ ██║██║  ██║███████║██║  ██╗██║██║ ╚████║╚██████╔╝    
  ╚═════╝ ╚═╝  ╚═╝╚══════╝    ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝  \e[95;1m \e[0m\n" 
 echo -e ""
-echo -e ' \e[91m[\e[92m★\e[91m] \e[32mPaste Phishing URL/Link here \e[96m(with https or http):\e[0m '
+echo -e ' \e[91m[\e[92m★\e[91m] \e[32mEnter your Link/URL here \e[96m(with https or http):\e[0m '
 echo -en "\e[32m =>\e[0m "
 read phish
 url_checker $phish
@@ -37,14 +37,13 @@ echo -e ""
 short=$(curl -s https://vurl.com/api.php?url=${phish})
 shorter=${short#https://}
 echo -e ""
-echo -e ' \e[91m[\e[92m*\e[91m]\e[93m\e[1m Domain to mask the Phishing URL \e[21m\e[0m: \e[91m(Ex:\e[96m https://google.com, https://youtube.com , http://facebook.com)\e[0m'
+echo -e ' \e[91m[\e[92m*\e[91m]\e[93m\e[1m Choose Domain to mask your link/URL \e[21m\e[0m: \e[91m(Ex:\e[96m https://google.com, https://youtube.com , http://facebook.com)\e[0m'
 echo -en "\e[32m =>\e[0m "
 read mask
 url_checker $mask
 echo -e ""
 echo -e ""
-echo -e ' \e[91m[\e[92m*\e[91m] \e[93m\e[1mType social engineering words : \e[21m\e[0m\e[91m(Ex:\e[96m like, free-money, free-cource, free-insta-followers)'
-echo -e " \e[32m Don't use space just use\e[91m - \e[32mbetween social engineering words\e[0m"
+echo -e ' \e[91m[\e[92m*\e[91m] \e[93m\e[1mType Enter URL words : \e[21m\e[0m\e[91m(Ex:\e[96m like, free-money, free-cource, free-insta-followers)'
 echo -en "\e[32m=>\e[0m "
 read words
 echo -e ""
